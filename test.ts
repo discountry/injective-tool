@@ -33,13 +33,13 @@ const msg = MsgSend.fromJSON({
 
 async function account(address: string) {
   /** Account Details **/
-  // const network = getNetworkInfo(Network.Public);
+  // const network = getNetworkInfo(Network.Testnet);
   // const chainRestAuthApi = new ChainRestAuthApi(network.rest)
   // const accountDetails = await chainRestAuthApi.fetchAccount(
   //   address
   // );
   // console.log(`Account Details: ${JSON.stringify(accountDetails)}`);
-  const endpoints = getNetworkEndpoints(Network.Public);
+  const endpoints = getNetworkEndpoints(Network.Testnet);
 
   const chainGrpcBankApi = new ChainGrpcBankApi(endpoints.grpc);
 
@@ -56,7 +56,7 @@ async function account(address: string) {
 async function signTransaction() {
   const txHash = await new MsgBroadcasterWithPk({
     privateKey,
-    network: Network.Public,
+    network: Network.Testnet,
   }).broadcast({
     msgs: msg,
     memo: inscription,

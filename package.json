@@ -12,6 +12,7 @@
   },
   "scripts": {
     "start": "ts-node index.ts",
+    "test": "ts-node test.ts",
     "prod": "node ./dist/index.js",
     "build": "tsc simple.ts"
   },
