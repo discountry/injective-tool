@@ -15,12 +15,14 @@ vim .env
 ### test
 
 ```bash
+yarn
 yarn test
 ```
 
 ### mint
 
 ```bash
+yarn
 yarn start
 ```
 
